@@ -181,7 +181,7 @@ const baseService = {
     Object.entries(params).forEach(([param, key]) => {
       options[key] && searchParams.append(param, options[key].toString());
     });
-    const imageEndpoint = joinPaths("/", "/_image");
+    const imageEndpoint = joinPaths("/Nuevo-Portfolio", "/_image");
     return `${imageEndpoint}?${searchParams}`;
   },
   parseURL(url) {
@@ -259,7 +259,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      '../sharp_e336c181.mjs'
+      '../sharp_10062bce.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -298,7 +298,7 @@ async function getImage$1(options, imageConfig) {
   };
 }
 
-const $$Astro$c = createAstro();
+const $$Astro$c = createAstro("https://k1ri86.github.io");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Image;
@@ -319,7 +319,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
 const imageConfig = {"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);
 
-const $$Astro$b = createAstro();
+const $$Astro$b = createAstro("https://k1ri86.github.io");
 const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$ViewTransitions;
@@ -327,9 +327,9 @@ const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => 
   return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>`;
 }, "E:/Dev/Nuevo-Portfolio/node_modules/.pnpm/astro@3.1.0/node_modules/astro/components/ViewTransitions.astro", void 0);
 
-const avatar = {"src":"/_astro/avatar_temp.7bd0e419.jpeg","width":997,"height":1200,"format":"jpg"};
+const avatar = {"src":"/Nuevo-Portfolio/_astro/avatar_temp.7bd0e419.jpeg","width":997,"height":1200,"format":"jpg"};
 
-const $$Astro$a = createAstro();
+const $$Astro$a = createAstro("https://k1ri86.github.io");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$Header;
@@ -339,7 +339,7 @@ Kiri86
 </h1>` : renderTemplate`<h1 id="title" class=" text-3xl sm:text-4xl md:text-5xl font-rock  drop-shadow-md"></h1>`}</div></div></header>`;
 }, "E:/Dev/Nuevo-Portfolio/src/components/Header.astro", "self");
 
-const $$Astro$9 = createAstro();
+const $$Astro$9 = createAstro("https://k1ri86.github.io");
 const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$Nav;
@@ -50533,7 +50533,7 @@ ${contents}`
   };
 }
 
-const $$Astro$8 = createAstro();
+const $$Astro$8 = createAstro("https://k1ri86.github.io");
 const $$Icon = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$Icon;
@@ -50580,7 +50580,7 @@ async function getUsedSprites(request) {
   return [];
 }
 
-const $$Astro$7 = createAstro();
+const $$Astro$7 = createAstro("https://k1ri86.github.io");
 const $$Spritesheet = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$Spritesheet;
@@ -50597,7 +50597,7 @@ ${e}`);
   return renderTemplate`${maybeRenderHead()}<svg${addAttribute(`position: absolute; width: 0; height: 0; overflow: hidden; ${style ?? ""}`.trim(), "style")}${spreadAttributes({ "aria-hidden": true, ...props })} astro-icon-spritesheet>${icons.map((icon) => renderTemplate`<symbol${spreadAttributes(icon.props)}${addAttribute(`${SPRITESHEET_NAMESPACE}:${icon.name}`, "id")}>${unescapeHTML(icon.innerHTML)}</symbol>`)}</svg>`;
 }, "E:/Dev/Nuevo-Portfolio/node_modules/.pnpm/astro-icon@0.8.1/node_modules/astro-icon/lib/Spritesheet.astro", void 0);
 
-const $$Astro$6 = createAstro();
+const $$Astro$6 = createAstro("https://k1ri86.github.io");
 const $$SpriteProvider = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$SpriteProvider;
@@ -50605,7 +50605,7 @@ const $$SpriteProvider = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate`${unescapeHTML(content)}` })}${renderComponent($$result, "Spritesheet", $$Spritesheet, {})}`;
 }, "E:/Dev/Nuevo-Portfolio/node_modules/.pnpm/astro-icon@0.8.1/node_modules/astro-icon/lib/SpriteProvider.astro", void 0);
 
-const $$Astro$5 = createAstro();
+const $$Astro$5 = createAstro("https://k1ri86.github.io");
 const $$Sprite = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$Sprite;
@@ -50621,26 +50621,26 @@ const $$Sprite = createComponent(async ($$result, $$props, $$slots) => {
 
 Object.assign($$Sprite, { Provider: $$SpriteProvider });
 
-const $$Astro$4 = createAstro();
+const $$Astro$4 = createAstro("https://k1ri86.github.io");
 const $$Social = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Social;
   return renderTemplate`${maybeRenderHead()}<div class="flex justify-around"><a href="https://github.com/k1ri86" rel="sin abrir sin referencia" target="_blank" aria-label="Perfil de GitHub de Kiri86">${renderComponent($$result, "Icon", $$Icon, { "class": "w-6 h-6", "name": "mdi:github", "alt": "Github Icon" })}</a><a href="https://www.linkedin.com/in/kiri86dev/" rel="sin abrir sin referencia" target="_blank" aria-label="Perfil de LinkedIn de Kiri86">${renderComponent($$result, "Icon", $$Icon, { "class": "w-6 h-6", "name": "mdi:linkedin", "alt": "Linkedin Icon" })}</a><a href="https://twitter.com/k1ri86" rel="sin abrir sin referencia" target="_blank" aria-label="Perfil de Twitter de Kiri86">${renderComponent($$result, "Icon", $$Icon, { "class": "w-6 h-6", "name": "mdi:twitter", "alt": "Twitter Icon" })}</a></div>`;
 }, "E:/Dev/Nuevo-Portfolio/src/components/Social.astro", void 0);
 
-const $$Astro$3 = createAstro();
+const $$Astro$3 = createAstro("https://k1ri86.github.io");
 const $$MainLayout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$MainLayout;
   const { title, animated } = Astro2.props;
-  return renderTemplate`<html lang="en"><head>${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}<meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator"${addAttribute(Astro2.generator, "content")}><meta name="description" content="El portfolio de Kiri86 incluye tipos, JavaScript, Typecript y C#."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://kiri86.com/"><meta property="og:title" content="Kiri86"><meta property="og:description" content="Kiri86 es desarrollador y diseñador web."><meta property="og:image" content="https://michaelduren.com/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://kiri86.com/"><meta property="twitter:title" content="Kiri86"><meta property="twitter:description" content="Kiri86 es desarrollador y diseñador web."><meta property="twitter:image" content="https://michaelduren.com/og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"><title>${title}</title>${renderHead()}</head><body class="min-h-screen flex flex-col p-4 gap-2"><div class="px-2 py-2 rounded-lg w-full"${addAttribute(createTransitionScope($$result, "sc7nvn2c"), "data-astro-transition-persist")}>${renderComponent($$result, "Header", $$Header, { "animated": animated })}</div><!-- Toma la altura restante --><div class="flex h-full flex-1 px-2 py-2 rounded-lg gap-8 flex-col md:flex-row"><aside class="flex flex-col justify-between md:sticky top-[5%] max-h-[70vh]"${addAttribute(createTransitionScope($$result, "j5465pbr"), "data-astro-transition-persist")}><div class="bg-yellow-300 px-8 py-2 rounded-lg shadow-md">${renderComponent($$result, "Nav", $$Nav, {})}</div><div class="bg-yellow-300 px-8 py-2 rounded-lg shadow-md md:block hidden">${renderComponent($$result, "Social", $$Social, {})}</div></aside><main class="flex-1 flex flex-col items-center">${renderSlot($$result, $$slots["default"])}</main></div><footer><div class="bg-yellow-300 px-8 py-2 rounded-lg shadow-md block md:hidden mt-8">${renderComponent($$result, "Social", $$Social, {})}</div></footer><audio preload="auto" id="bell" src="/audio/bell.mp3"></audio><audio preload="auto" id="blip" src="/audio/blip.mp3"></audio></body></html>`;
+  return renderTemplate`<html lang="en"><head>${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}<meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator"${addAttribute(Astro2.generator, "content")}><meta name="description" content="El portfolio de Kiri86 incluye tipos, JavaScript, Typecript y C#."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://kiri86.com/"><meta property="og:title" content="Kiri86"><meta property="og:description" content="Kiri86 es desarrollador y diseñador web."><meta property="og:image" content="https://kiri86.com/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://kiri86.com/"><meta property="twitter:title" content="Kiri86"><meta property="twitter:description" content="Kiri86 es desarrollador y diseñador web."><meta property="twitter:image" content="https://kiri86.com/og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"><title>${title}</title>${renderHead()}</head><body class="min-h-screen flex flex-col p-4 gap-2"><div class="px-2 py-2 rounded-lg w-full"${addAttribute(createTransitionScope($$result, "sc7nvn2c"), "data-astro-transition-persist")}>${renderComponent($$result, "Header", $$Header, { "animated": animated })}</div><!-- Toma la altura restante --><div class="flex h-full flex-1 px-2 py-2 rounded-lg gap-8 flex-col md:flex-row"><aside class="flex flex-col justify-between md:sticky top-[5%] max-h-[70vh]"${addAttribute(createTransitionScope($$result, "j5465pbr"), "data-astro-transition-persist")}><div class="bg-blue-900 px-8 py-2 rounded-lg shadow-md">${renderComponent($$result, "Nav", $$Nav, {})}</div><div class="bg-blue-900 px-8 py-2 rounded-lg shadow-md md:block hidden">${renderComponent($$result, "Social", $$Social, {})}</div></aside><main class="flex-1 flex flex-col items-center">${renderSlot($$result, $$slots["default"])}</main></div><footer><div class="bg-blue-900 px-8 py-2 rounded-lg shadow-md block md:hidden mt-8">${renderComponent($$result, "Social", $$Social, {})}</div></footer><audio preload="auto" id="bell" src="/audio/bell.mp3"></audio><audio preload="auto" id="blip" src="/audio/blip.mp3"></audio></body></html>`;
 }, "E:/Dev/Nuevo-Portfolio/src/layouts/MainLayout.astro", "self");
 
-const Envelope = {"src":"/_astro/envelope.56b8a66d.svg","width":158.74896,"height":106.07371,"format":"svg"};
+const Envelope = {"src":"/Nuevo-Portfolio/_astro/envelope.56b8a66d.svg","width":158.74896,"height":106.07371,"format":"svg"};
 
-const Mobile = {"src":"/_astro/mobile.21ec63ed.svg","width":160.57809,"height":160.57809,"format":"svg"};
+const Mobile = {"src":"/Nuevo-Portfolio/_astro/mobile.21ec63ed.svg","width":160.57809,"height":160.57809,"format":"svg"};
 
-const $$Astro$2 = createAstro();
+const $$Astro$2 = createAstro("https://k1ri86.github.io");
 const $$Input = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Input;
@@ -50648,7 +50648,7 @@ const $$Input = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"${addAttribute(name, "for")}>${label}</label><input${addAttribute(name, "id")} class="appearance-none text-xs sm:text-sm md:text-base block w-full bg-gray-200 text-gray-700 border rounded-xl py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"${addAttribute(name, "name")}${addAttribute(required, "required")}${addAttribute(type, "type")}>`;
 }, "E:/Dev/Nuevo-Portfolio/src/components/Input.astro", void 0);
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://k1ri86.github.io");
 const $$TextArea = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$TextArea;
@@ -50656,7 +50656,7 @@ const $$TextArea = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"${addAttribute(name, "for")}>${label}</label><textarea${addAttribute(name, "id")} class="w-full text-xs sm:text-sm md:text-base focus:bg-white rounded-xl bg-gray-200 p-2 text-gray-900 border-0 focus:ring-0"${addAttribute(required, "required")}${addAttribute(name, "name")} rows="8"></textarea>`;
 }, "E:/Dev/Nuevo-Portfolio/src/components/TextArea.astro", void 0);
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://k1ri86.github.io");
 const prerender = false;
 const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
@@ -50704,18 +50704,18 @@ const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
       console.error(error);
     }
   }
-  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Kiri86 - Contacto" }, { "default": ($$result2) => renderTemplate`${maybeRenderHead()}<div class="flex gap-2 md:gap-3 lg:gap-4 flex-col w-full"><div class=""><h2 class="font-bold text-2xl md:text-4xl">Contacto</h2></div><div class="flex flex-col md:flex-row gap-8"><div${addAttribute([
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Kiri86 - Contacto" }, { "default": ($$result2) => renderTemplate`${maybeRenderHead()}<div class="flex gap-2 md:gap-3 lg:gap-4 flex-col w-full"><div class=""><h2 class="font-bold text-2xl md:text-4xl text-blue-700">Contacto</h2></div><div class="flex flex-col md:flex-row gap-8"><div${addAttribute([
     "flex flex-1 flex-col justify-between order-2 md:order-1",
     { hidden: !sentSuccessfully }
-  ], "class:list")}><div class="flex flex-col gap-8"><h2 class="text-2xl text-blue-700 font-semibold">Enviado con exito! 🎉</h2><p class="font-semibold text-gray-600 md:text-lg text-base">
-Gracias por contactarme.</p><p class="font-semibold text-gray-600 md:text-lg text-base">
+  ], "class:list")}><div class="flex flex-col gap-8"><h2 class="text-2xl text-white-700 font-semibold">Enviado con exito! 🎉</h2><p class="font-semibold text-white md:text-lg text-base">
+Gracias por contactarme.</p><p class="font-semibold text-white md:text-lg text-base">
 Me comunicaré contigo dentro de las proximas 24 horas. Espero escuchar más
             sobre tu proyecto o negocio. ¡Gracias!
 </p></div><a class="w-full flex" data-astro-reload href="/contact"><button class="btn flex-1 btn-neutral mt-8"> Enviar otro</button></a></div><form${addAttribute([
     "flex flex-1 flex-col justify-between order-2 md:order-1",
     { hidden: sentSuccessfully }
-  ], "class:list")} method="post"><div>${renderComponent($$result2, "Input", $$Input, { "name": "nombre", "type": "text", "required": true, "label": "Nombre" })}${renderComponent($$result2, "Input", $$Input, { "name": "email", "type": "email", "required": true, "label": "Email" })}${renderComponent($$result2, "TextArea", $$TextArea, { "name": "mensaje", "required": true, "label": "Mensaje" })}</div><button class="btn btn-neutral mt-8">Enviar</button></form><div class="flex w-full items-center flex-col flex-1 order-1 md:order-2"><div class="w-full flex flex-col gap-4"><h2 class="text-lg md:mb-8 sm:text-xl md:text-2xl lg:text-3xl text-purple-700 font-bold">Me encantaría saber mas de ti</h2><p class="font-semibold text-gray-600 md:text-base text-sm">Déjame saber cómo puedo contribuir a tu organización.</p><p class="font-semibold text-gray-600 md:text-base text-sm">
-Ayudo a las empresas a encontrar <span class="text-purple-700 font-bold">soluciones en sus projectos</span></p><p class="font-semibold text-gray-600 md:text-base text-sm">
+  ], "class:list")} method="post"><div>${renderComponent($$result2, "Input", $$Input, { "name": "nombre", "type": "text", "required": true, "label": "Nombre" })}${renderComponent($$result2, "Input", $$Input, { "name": "email", "type": "email", "required": true, "label": "Email" })}${renderComponent($$result2, "TextArea", $$TextArea, { "name": "mensaje", "required": true, "label": "Mensaje" })}</div><button class="btn btn-neutral mt-8">Enviar</button></form><div class="flex w-full items-center flex-col flex-1 order-1 md:order-2"><div class="w-full flex flex-col gap-4"><h2 class="text-lg md:mb-8 sm:text-xl md:text-2xl lg:text-3xl text-blue-700 font-bold">Me encantaría saber mas de ti</h2><p class="font-semibold text-white md:text-base text-sm">Déjame saber cómo puedo contribuir a tu organización.</p><p class="font-semibold text-white md:text-base text-sm">
+Ayudo a las empresas a encontrar <span class="text-blue-700 font-bold">soluciones en sus projectos</span></p><p class="font-semibold text-blue-700 md:text-base text-sm">
 Especializado en JavaScript, Typecript y C#, me encanta trabajar con
             tecnologías como React, Angular, Node.js y MongoDB para poner a prueba mis
             habilidades.
@@ -50723,7 +50723,7 @@ Especializado en JavaScript, Typecript y C#, me encanta trabajar con
 }, "E:/Dev/Nuevo-Portfolio/src/pages/contact.astro", void 0);
 
 const $$file = "E:/Dev/Nuevo-Portfolio/src/pages/contact.astro";
-const $$url = "/contact";
+const $$url = "/Nuevo-Portfolio/contact";
 
 const contact = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,

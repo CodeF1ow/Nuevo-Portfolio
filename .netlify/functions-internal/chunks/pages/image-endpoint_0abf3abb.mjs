@@ -1,4 +1,4 @@
-import { g as getDefaultExportFromCjs, a as getConfiguredImageService, i as imageConfig, b as isRemotePath, c as isRemoteAllowed } from './contact_dab439f9.mjs';
+import { g as getDefaultExportFromCjs, a as getConfiguredImageService, i as imageConfig, b as isRemotePath, c as isRemoteAllowed } from './contact_d4ed9030.mjs';
 
 /**
  * @param typeMap [Object] Map of MIME type -> Array[extensions]
