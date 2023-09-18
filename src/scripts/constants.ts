@@ -29,7 +29,7 @@ export const terminalCommands = [
     ],
   },
   {
-    command: 'Diviertite',
+    command: 'Diviertete',
     output: ['Explorando mi stio web!', '🥳🥳🥳'],
   },
 ];
