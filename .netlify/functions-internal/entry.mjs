@@ -1,20 +1,20 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_a1c1a142.mjs';
+import { manifest } from './manifest_d561d7ea.mjs';
 import './chunks/astro_49ea4433.mjs';
-import './chunks/pages/image-endpoint_b9641f4c.mjs';
-import './chunks/pages/contact_e12ae263.mjs';
+import './chunks/pages/image-endpoint_292d0d4a.mjs';
+import './chunks/pages/contact_a6d11e3d.mjs';
 /* empty css                                 */import 'os';
 import 'fs';
 import 'url';
 import 'path';
 import 'nodemailer';
 
-const _page0  = () => import('./chunks/image-endpoint_eeef7f8d.mjs');
-const _page1  = () => import('./chunks/index_7388f985.mjs');
-const _page2  = () => import('./chunks/contact_cf837a92.mjs');
-const _page3  = () => import('./chunks/about_b0152700.mjs');
-const _page4  = () => import('./chunks/work_61f7dc1b.mjs');const pageMap = new Map([["node_modules/.pnpm/astro@3.1.0/node_modules/astro/dist/assets/image-endpoint.js", _page0],["src/pages/index.astro", _page1],["src/pages/contact.astro", _page2],["src/pages/about.astro", _page3],["src/pages/work.astro", _page4]]);
+const _page0  = () => import('./chunks/image-endpoint_a0c46008.mjs');
+const _page1  = () => import('./chunks/index_8c38ac9a.mjs');
+const _page2  = () => import('./chunks/contact_73fc9404.mjs');
+const _page3  = () => import('./chunks/about_579c98e0.mjs');
+const _page4  = () => import('./chunks/work_a8e67d1e.mjs');const pageMap = new Map([["node_modules/.pnpm/astro@3.1.0/node_modules/astro/dist/assets/image-endpoint.js", _page0],["src/pages/index.astro", _page1],["src/pages/contact.astro", _page2],["src/pages/about.astro", _page3],["src/pages/work.astro", _page4]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,

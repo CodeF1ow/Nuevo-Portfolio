@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ['light'],
+    themes: ['dark'],
   },
   plugins: [require('daisyui')],
 };

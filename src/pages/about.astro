@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import MainLayout from '../layouts/MainLayout.astro';
-import rubberDuck from '../images/duck.png';
+import rubberDuck from '../images/duck-blue.png';
 import rubberDuckBlue from '../images/duck-blue.png';
 import Technologies from '../components/Technologies.astro';
 ---
@@ -9,23 +9,23 @@ import Technologies from '../components/Technologies.astro';
 <MainLayout title="Kiri86 - Acerca De">
   <div class="flex lg:justify-between lg:w-full">
     <div class="flex flex-col gap-2 md:gap-3 lg:gap-4 flex-1">
-      <h2 class="font-bold text-2xl md:text-4xl">Acerca De Mí</h2>
+      <h2 class="font-bold text-2xl md:text-4xl text-blue-700">Acerca De Mí</h2>
       <p class="md:text-base text-sm">
         <p class="md:text-base text-sm">
         Hola! Soy Oscar, un apasionado desarrollador y diseñador web con una visión creativa
         y un compromiso excelente. Me encanta aprender cosas nuevas y siempre estoy buscando
         nuevas tecnologías y nuevas formas de resolver problemas.
       </p>
-      <span class="font-bold text-amber-700">Servicios</span>
-      <span class="text-purple-700">Diseño Creativo:</span> 
+      <span class="font-bold text-blue-700 text-2xl">Servicios</span>
+      <span class="text-green-400">Diseño Creativo:</span> 
         Me encanta dar vida a las ideas a través del diseño.
         Desde logos hasta interfaces de usuario, me gusta crear elementos visuales que destaquen.
-        <span class="text-purple-700">Desarrollo Web:</span>
+        <span class="text-green-400 ">Desarrollo Web:</span>
         Soy competente en una variedad de tecnologías web, desde HTML, CSS y JavaScript
         hasta frameworks como React y Astro. Puedo convertir tus conceptos en sitios web completamente funcionales.
       </p>
-      <span class="font-bold text-amber-700">Mi Enfoque</span>
-      <p class="font-semibold text-gray-600 md:text-base text-sm">
+      <span class="font-bold text-blue-700 text-2xl">Mi Enfoque</span>
+      <p class="font-semibold md:text-base text-sm">
         Mi enfoque principal es crear experiencias web cautivadoras y funcionales
         que no solo sean atractivas visualmente, sino que también proporcionen
         una navegación intuitiva y una experiencia de usuario excepcional.
@@ -34,8 +34,8 @@ import Technologies from '../components/Technologies.astro';
       </p>
     </div>
     <div>
-      <p class="font-bold text-purple-700">
-        Qué pasa con el <span class="text-amber-700">patito de goma?</span></p
+      <p class="font-bold text-blue-400">
+        Qué pasa con el <span class="text-blue-700">patito de goma?</span></p
       >
       <p class="text-xs text-gray-600">(Puedes hacer click en él)</p>
     </div>
@@ -55,7 +55,7 @@ import Technologies from '../components/Technologies.astro';
     </div>
   </div>
   <div class="w-full mt-4">
-    <h2 class="font-bold text-2xl">Skills:</h2>
+    <h2 class="font-bold text-2xl text-blue-700">Skills:</h2>
     <Technologies />
   </div>
   <audio preload="auto" id="squeek-high" src="/audio/squeek-high.mp3"></audio>

@@ -17,7 +17,7 @@ const websiteList: PortfolioItem[] = [
     websiteLink: 'https://kiri86.com/',
     codeLink: 'https://github.com/k1ri86/nuevo-portfolio',
     images: [PortfolioHomeImage, PortfolioAboutImage, PortfolioWorkImage],
-    color: 'bg-rose-100 shadow-rose-900',
+    color: 'bg-blue-100 shadow-blue-900',
   },
   {
     title: 'KC Admin',
