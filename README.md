@@ -34,7 +34,7 @@ Además, la inmersión es mejorada con la incorporación de sonido 🎼​.
 git clone https://github.com/K1ri86/Nuevo-Portfolio.git
 ```
 
-## 2. Instala las dependencias utilizando pnpm o bun si estás corriendo Linux.
+## 2. Instala pnpm o bun si estás corriendo Linux, macOS y WSL.
 
 Si aún no tienes pnpm o bun, puedes instalarlos globalmente utilizando:
 
@@ -72,8 +72,12 @@ curl -fsSL https://bun.sh/install | bash
 ```
   <summary><strong>Ejecutar</strong></summary>
 
-| Comandos               | Acción                                            |
-| :--------------------- | :-----------------------------------------------  |
+
+## 3. Instala dependencias y ejecuta tu portfolio.
+
+| Comandos               | Acción                                           |
+| :--------------------- | :----------------------------------------------- |
+| `pnpm install`         | Instala las dependencias del proyecto            |
 | `pnpm run dev`         | Inicia el servidor en `localhost:4321`           |
 | `pnpm run build`       | Construya su sitio de producción para`./dist/`   |
 | `pnpm run preview`     | Obtenga una vista previa, antes de implementarla |
