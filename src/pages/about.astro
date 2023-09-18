@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import MainLayout from '../layouts/MainLayout.astro';
+import rubberDuck from '../images/duck.png';
+import rubberDuckBlue from '../images/duck-blue.png';
+import Technologies from '../components/Technologies.astro';
+---
+
+<MainLayout title="Kiri86 - Acerca De">
+  <div class="flex lg:justify-between lg:w-full">
+    <div class="flex flex-col gap-2 md:gap-3 lg:gap-4 flex-1">
+      <h2 class="font-bold text-2xl md:text-4xl">Acerca De Mí</h2>
+      <p class="md:text-base text-sm">
+        <p class="md:text-base text-sm">
+        Hola! Soy Oscar, un apasionado desarrollador y diseñador web con una visión creativa
+        y un compromiso excelente. Me encanta aprender cosas nuevas y siempre estoy buscando
+        nuevas tecnologías y nuevas formas de resolver problemas.
+      </p>
+      <span class="font-bold text-amber-700">Servicios</span>
+      <span class="text-purple-700">Diseño Creativo:</span> 
+        Me encanta dar vida a las ideas a través del diseño.
+        Desde logos hasta interfaces de usuario, me gusta crear elementos visuales que destaquen.
+        <span class="text-purple-700">Desarrollo Web:</span>
+        Soy competente en una variedad de tecnologías web, desde HTML, CSS y JavaScript
+        hasta frameworks como React y Astro. Puedo convertir tus conceptos en sitios web completamente funcionales.
+      </p>
+      <span class="font-bold text-amber-700">Mi Enfoque</span>
+      <p class="font-semibold text-gray-600 md:text-base text-sm">
+        Mi enfoque principal es crear experiencias web cautivadoras y funcionales
+        que no solo sean atractivas visualmente, sino que también proporcionen
+        una navegación intuitiva y una experiencia de usuario excepcional.
+        Creo en la importancia de un diseño limpio y minimalista, combinado con
+        un desarrollo sólido y seguro, para lograr resultados sobresalientes.
+      </p>
+    </div>
+    <div>
+      <p class="font-bold text-purple-700">
+        Qué pasa con el <span class="text-amber-700">patito de goma?</span></p
+      >
+      <p class="text-xs text-gray-600">(Puedes hacer click en él)</p>
+    </div>
+    <div class="flex-1 flex-col flex justify-around">
+      <Image
+        id="rubber-duck"
+        class="active:scale-125 transition-all cursor-pointer duration-500"
+        src={rubberDuck}
+        alt="Rubber Duck"
+      />
+      <Image
+        id="rubber-duck-blue"
+        class="active:scale-125 md:hidden transition-all cursor-pointer duration-500"
+        src={rubberDuckBlue}
+        alt="Rubber Duck"
+      />
+    </div>
+  </div>
+  <div class="w-full mt-4">
+    <h2 class="font-bold text-2xl">Skills:</h2>
+    <Technologies />
+  </div>
+  <audio preload="auto" id="squeek-high" src="/audio/squeek-high.mp3"></audio>
+  <audio preload="auto" id="squeek-low" src="/audio/squeek-low.mp3"></audio>
+
+  <script>
+    import '../scripts/duck.ts';
+  </script>
+</MainLayout>

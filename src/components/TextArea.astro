@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  label: string;
+  required: boolean;
+}
+
+const { name, label, required } = Astro.props;
+---
+
+<label
+  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+  for={name}
+>
+  {label}
+</label>
+<textarea
+  id={name}
+  class="w-full text-xs sm:text-sm md:text-base focus:bg-white rounded-xl bg-gray-200 p-2 text-gray-900 border-0 focus:ring-0"
+  required={required}
+  name={name}
+  rows="8"></textarea>

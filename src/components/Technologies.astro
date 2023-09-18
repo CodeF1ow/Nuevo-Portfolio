@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import TypeScriptIcon from "../icons/typescript.png";
+import JavaScriptIcon from "../icons/javascript.png";
+import ReactIcon from "../icons/react.png";
+import CSharpIcon from "../icons/csharp.png";
+import AstroIcon from "../icons/astro.png";
+import CssIcon from "../icons/css.png";
+---
+
+<div class="carousel carousel-center rounded-box">
+  <div class="carousel-item">
+    <Image class="w-10 h-10" src={AstroIcon} alt="Logo de Astro" />
+  </div>
+</div>
+
+  <div class="carousel carousel-center rounded-box">
+    <div class="carousel-item">
+      <Image src={JavaScriptIcon} alt="Logo de Javascript" />
+    </div>
+
+    <div class="carousel-item">
+      <Image src={TypeScriptIcon} alt="Logo de TypeScrip" />
+    </div>
+    <div class="carousel-item">
+      <Image src={CssIcon} alt="Logo de CSS" />
+    </div>
+    <div class="carousel-item">
+      <Image src={ReactIcon} alt="Logo de React" />
+    </div>
+    <div class="carousel-item">
+      <Image src={CSharpIcon} alt="Logo de C Sharp" />
+    </div>
+  </div>
+</div>

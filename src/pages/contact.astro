@@ -1,0 +1,143 @@
+---
+export const prerender = false;
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Envelope from '../images/envelope.svg';
+import Mobile from '../images/mobile.svg';
+import Input from '../components/Input.astro';
+import TextArea from '../components/TextArea.astro';
+import { Image } from 'astro:assets';
+import nodemailer from 'nodemailer';
+
+let sentSuccessfully = false;
+
+if (Astro.request.method === 'POST') {
+  try {
+    const data = await Astro.request.formData();
+    const nombre = data.get('nombre');
+    const email = data.get('email');
+    const mensaje = data.get('mensaje');
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: import.meta.env.APP_GMAIL_EMAIL,
+        pass: import.meta.env.APP_GMAIL_PASSWORD,
+      },
+    });
+
+    if (!nombre || !email || !mensaje) {
+      return new Response(
+        JSON.stringify({
+          mensaje: 'Faltan campos obligatorios',
+        }),
+        { status: 400 }
+      );
+    }
+    // Envia los datos y luego devuelva una respuesta si el envio a sido exitoso
+    const responseSent = await transporter.sendMail({
+      from: 'contacto@kiri86.es',
+      to: 'contacto@arctic.es',
+      subject: `SITIO WEB: MENSAJE DE ${nombre}`,
+      html: `
+		<h1>${nombre}: ${email}</h1>
+		<h2>Mensaje:</h2>
+		<p>${mensaje}</p>
+		`,
+    });
+
+    if (responseSent.accepted.length > 0) {
+      sentSuccessfully = true;
+    } else {
+      return (
+        new Response({
+          mensaje: JSON.stringify('Error al enviar mensaje'),
+        }),
+        { status: 500 }
+      );
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+---
+
+<MainLayout title="Kiri86 - Contacto">
+  <div class="flex gap-2 md:gap-3 lg:gap-4 flex-col w-full">
+    <div class="">
+      <h2 class="font-bold text-2xl md:text-4xl">Contacto</h2>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div
+        class:list={[
+          'flex flex-1 flex-col justify-between order-2 md:order-1',
+          { hidden: !sentSuccessfully },
+        ]}
+      >
+        <div class="flex flex-col gap-8">
+          <h2 class="text-2xl text-blue-700 font-semibold"
+            >Enviado con exito! 🎉</h2
+          >
+          <p class="font-semibold text-gray-600 md:text-lg text-base">
+            Gracias por contactarme.</p
+          >
+          <p class="font-semibold text-gray-600 md:text-lg text-base">
+            Me comunicaré contigo dentro de las proximas 24 horas. Espero escuchar más
+            sobre tu proyecto o negocio. ¡Gracias!
+          </p>
+        </div>
+        <a class="w-full flex" data-astro-reload href="/contact">
+          <button class="btn flex-1 btn-neutral mt-8"> Enviar otro</button>
+        </a>
+      </div>
+      <form
+        class:list={[
+          'flex flex-1 flex-col justify-between order-2 md:order-1',
+          { hidden: sentSuccessfully },
+        ]}
+        method="post"
+      >
+        <div>
+          <Input name="nombre" type="text" required={true} label="Nombre" />
+          <Input name="email" type="email" required={true} label="Email" />
+          <TextArea name="mensaje" required={true} label="Mensaje" />
+        </div>
+        <button class="btn btn-neutral mt-8">Enviar</button>
+      </form>
+      <div class="flex w-full items-center flex-col flex-1 order-1 md:order-2">
+        <div class="w-full flex flex-col gap-4">
+          <h2
+            class="text-lg md:mb-8 sm:text-xl md:text-2xl lg:text-3xl text-purple-700 font-bold"
+            >Me encantaría saber mas de ti</h2
+          >
+          <p class="font-semibold text-gray-600 md:text-base text-sm"
+            >Déjame saber cómo puedo contribuir a tu organización.</p
+          >
+          <p class="font-semibold text-gray-600 md:text-base text-sm">
+            Ayudo a las empresas a encontrar <span class="text-purple-700 font-bold"
+              >soluciones en sus projectos</span
+            >
+          </p>
+          <p class="font-semibold text-gray-600 md:text-base text-sm">
+            Especializado en JavaScript, Typecript y C#, me encanta trabajar con
+            tecnologías como React, Angular, Node.js y MongoDB para poner a prueba mis
+            habilidades.
+          </p>
+        </div>
+        <div
+          class="flex mt-8 md:mt-16 h-24 gap-x-20 md:gap-x-0 justify-center md:justify-around items-center w-full"
+        >
+          <Image
+            class="h-16 w-24 md:w-32 md:h-32 aspect-square"
+            src={Envelope}
+            alt="Envelope"
+          />
+          <Image
+            class="h-28 w-28 aspect-square md:h-32 md:w-32"
+            src={Mobile}
+            alt="Mobile"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
