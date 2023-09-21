@@ -7,8 +7,8 @@ Además, la inmersión es mejorada con la incorporación de sonido 🎼​.
 <details>
   <summary><strong>Capturas de Pantalla</strong></summary>
 
-![Captura de Pantalla 1](https://i.imgur.com/f2LPtQa.png)
-![Captura de Pantalla 2](https://i.imgur.com/NcP2tHt.png)
+![Captura de Pantalla 1](https://i.imgur.com/yyeZVZd.png)
+![Captura de Pantalla 2](https://i.imgur.com/Hb59UrU.png)
 
 </details>
 
