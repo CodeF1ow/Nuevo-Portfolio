@@ -102,3 +102,10 @@ Para **Bun** solo cambiar `pnpm` por `bun`
 > [Twitter](https://twitter.com/k1ri86)
 
 </details>
+
+<details>
+  <summary><strong>Licencia</strong></summary>
+
+> Este proyecto está bajo la [Licencia MIT](LICENSE).
+
+</details>
